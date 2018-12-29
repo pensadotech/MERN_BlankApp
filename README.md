@@ -36,7 +36,7 @@ Putting together a MERN application is a complicated task, and it requires many 
 
 * Before deploying to production the project must be build.  The build command will translate the React functionality into teh final single page code and will create a _"client/build"_ folder that will hold the production-version of the solution. The code inside this folder will be used by the _"server.js"_ once is sitting in production. 
 
-## Pre-Requisites for a MENR application
+## Pre-Requisites for a MERN application
 
 * Node JS and Mongo DB must be installed.
 * If the application needs to be stored in GitHub, create a repo and clone into the computer local drive.
@@ -44,7 +44,7 @@ Putting together a MERN application is a complicated task, and it requires many 
 
 ## Steps to create a MERN skeleton application
 
-1.	In teh root of the project folder, because was cloned or manually created, add a server file: _'server.js'_.
+1.	In the root of the project folder, because was cloned or manually created, add a server file: _'server.js'_.
 
 2.	Open the VSCode terminal.
 
@@ -59,7 +59,7 @@ npm i if-env
 npm i axios
 npm i react-router-dom
 ```
-5.	Below teh project folder, create the initial folder structure, that includes the following folders. 
+5.	Below the project folder, create the initial folder structure, that includes the following folders. 
 ```js
    client, 
    controllers,
@@ -71,7 +71,7 @@ npm i react-router-dom
 
 ![Initial Folders](./docs/1.Mern.InitFolders.png)
 
-6.	Build the code for the server (srver.js). The code below is an idea that can by copied and paste, and modified for teh individual needs. This offers consiserations for the server once is executed in production and Mongo DB connection string. Replace _'mydatbase'_ with the proper database name.
+6.	Build the code for the server (srver.js). The code below is an idea that can by copied and paste, and modified for the individual needs. This offers consiserations for the server once is executed in production and Mongo DB connection string. Replace _'mydatabase'_ with the proper database name.
 
 ```js
 // server.js : Production Server code
@@ -100,8 +100,8 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB 
-// IMPORTANT: Change 'mydatabase' to reflect you needs
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mydatbase";
+// IMPORTANT: Change 'mydataabase' to reflect you needs
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mydatabase";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Start listening 
@@ -186,7 +186,7 @@ With the basic application running, the next steps is creating all necessary par
 
 The models will be the Objet Document Mappings (ODM) for the MongoDB, throught the use of _'mongoose'_.
 
-The express routes will be devoted to handle database operations,or operations to retrieve data from outside. They will not be used for traditional HTML pages as MERN is a single page application. React will help defining the view, using components to render the application frontend.
+The express routes will be devoted to handle API operations like database access or retrieving data from outside. They will not be used for traditional HTML pages as MERN is a single page application. React will help defining the view, using components to render the application frontend.
 
 It is importnat to remember that the React components (client/src folders)  is a tool to program the frontend, and all the peices used will eventually be compiled and translated into a single page inside the _‘client/build’_ folder. React just provide the tools to facilitate the work for the developers, but is not what will be deployed.
 
