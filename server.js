@@ -24,7 +24,8 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/nasanewsmern";
+// IMPORTANT: Chnage 'mydatabase' to reflect you needs
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mydatbase";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Start listening 

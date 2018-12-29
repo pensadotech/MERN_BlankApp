@@ -41,7 +41,7 @@ Putting together a MERN application is complicated and it requires many manual s
 * Node JS and Mongo DB must be installed.
 * If the application needs to be stored in GitHub, create a repo and clone into the computer local drive.
 
-## Initial steps to create a MERN application
+## Initial steps to create a MERN skeleton application
 
 1.	Create a project folder and in the folder create a file “server.js”.
 2.	Open the VSCode terminal.
@@ -55,6 +55,7 @@ npm init -y
 npm i express mongoose body-parser
 npm i if-env
 npm i axios
+npm i react-router-dom
 ```
 5.	Create the initial folder structure, that includes the following folders: 
 ```js
@@ -95,8 +96,9 @@ if (process.env.NODE_ENV === "production") {
 // Routes
 app.use(routes);
 
-// Connect to the Mongo DB
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/nasanewsmern";
+// Connect to the Mongo DB 
+// IMPORTANT: Chnage 'mydatabase' to reflect you needs
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mydatbase";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Start listening 
@@ -145,22 +147,54 @@ npx create-react-app client
 ```
 
 * _client/package.json_ : insert a _'proxy' element with address to foloca server. 
-
 ```js
   // add under 'private' section
   "proxy": "http://localhost:3001/",
 ```
+11. From the root _'package.json'_ move the _'react-router-dom'_ dependency into the _'client/package.json'_, and copy the _'axios'_ depenndecy also.
 
+FROM: 
+![dependencies](./docs/2.packagejsonDependencies.png)
+
+TO:
+![finalDependencies](./docs/3.FinalDependencies.png)
+
+12. Re-run npm dependecies with teh latest changes in teh _'package.json'_ files
+```js
+npm i
+```
+
+13. Launch teh application to test that can run now.
+
+```js
+npm start
+```
+
+![appStart](./docs/4.AppStart.png)
+
+## Constructing the applicaitons
+
+With the basic application running, the following steps is creating necessary routes and add elements to the React components. 
+
+The express routes will be devoted to handle database operations,or operations to retrieve data from outside. They will not be used for traditional HTML pages as a MERN is a single page application. The screen manipulation will render information on the screen by using ‘components'.
+
+The React components (client/src folders) is a tool to program the frontend, and all the peices used will eventually be compiled and translated into a single page inside the ‘client/build’ folder. React just provide the tools to facilitate the work for the developers, but is not what will be deployed.
+
+### Express Routes
+
+
+### React components
+
+
+## Deploying the applciation to Heroku
 
 
 
 ## MERN Tiricks and ideas
 
-* Under development (laptop), the solution will execute essentially  the react portion inside the "client/src" folder using "webpack dev server". However, when in production, the "server.js" will be executed.
 
-* The react-router-dom need to be Inside the "client/package.json". Install at root level, but then copy refrence from "/package.json+ and add it into "client/package.json". re-initialize the project using "npm i" to make sure all dependencies are brought over.
 
-* Axios need to be refrenced in both "/package.json" and "client/package.json". Install at root level and the copy refrence inside the "client/package.json". re-initialize the project using "npm i" to make sure all dependencies are brought over.
+
 
 * Create API routes at '/routes', using express router. Thies need to be connected with the 'controller' libraries, which holds all libaries to access teh database or any externla AJAX calls.
 
