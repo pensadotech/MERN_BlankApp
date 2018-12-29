@@ -1,4 +1,4 @@
-// Production Server code
+
 const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require("mongoose")
@@ -24,8 +24,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-// IMPORTANT: Chnage 'mydatabase' to reflect you needs
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mydatbase";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/nasanewsmern";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Start listening 
