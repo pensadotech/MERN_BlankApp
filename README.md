@@ -50,7 +50,7 @@ Putting together a MERN application is complicated and it requires many manual s
 ```js
 npm init -y
 ```
-4.	Add Express and  other critical ‘npm’ packages, here is a list
+4.	Add Express and  other critical ‘npm’ packages, here is a commna basic list
 ```js
 npm i express mongoose body-parser
 npm i if-env
@@ -64,7 +64,7 @@ npm i axios
    routes, and 
    routes/api.  
 ```
-It should resemble something as follows:
+* It should resemble something as follows:
 
 ![Initial Folders](./docs/1.Mern.InitFolders.png)
 
@@ -109,22 +109,22 @@ console.log(`Listening at http://localhost:${PORT}`)
 ```js
 npx create-react-app client
 ```
-8.	In case a folder ‘.git.’ folder was created inside the _client’_ folder, remove it. Also, remove the _'.gitignore'_ generated under the _client’_ folder.
+8.	In case a folder _‘.git.’_ folder was created inside the _client’_ folder, **remove it**, otherwise GitHub will refuse to accept the project. Also, remove the _'.gitignore'_ generated under the _client’_ folder.
 
-9.	Add a ‘.gitignore’ file at the root level that includes the elements bellow. Look at the one included for this project
+9.	Add a _‘.gitignore’_ file at the root level that includes the elements bellow. Look at the one included for this project
 
 ```js
-# Dependency directories
-node_modules/
-jspm_packages/
-package-lock.json
-client/node_modules/
-client/package-lock.json
+  # Dependency directories
+  node_modules/
+  jspm_packages/
+  package-lock.json
+  client/node_modules/
+  client/package-lock.json
 ```
 
-10. There will be two _'package.json'_ files. One at the root level, and a second inside the _client’_ folder. Both need to be modified.
+10. There will be two _'package.json'_ files. One at the root level, and a second inside the _client’_ folder. Both need to be modified to interconnect them.
 
-* Root package.json:  need to include two sections, one for the scripts and the other for _‘devDependencies’_. 
+* Root _'package.json'_:  need to include two sections, one for the scripts and the other for _‘devDependencies’_. 
 
 ```js
   // Add/replace scripts below the 'main' section, and replace if exist
@@ -144,7 +144,7 @@ client/package-lock.json
    },
 ```
 
-* client/package.json : insert a _'proxy' element with address to foloca server. 
+* _client/package.json_ : insert a _'proxy' element with address to foloca server. 
 
 ```js
   // add under 'private' section
