@@ -192,7 +192,7 @@ It is importnat to remember that the React components (client/src folders)  is a
 
 To ilustrate the next steps building a **MERN** application, a specific example will be used. The exercise is to retreive NASA latest news and present them to the user, with the option to save the reference to the articles that are interesting, for leater read.
 
-### Models (**M**VC)
+### Models ('M' in MVC)
 
 The model will represent the collection that will be contained in the database. In this case will be an _Article_ collection.
 
@@ -201,7 +201,7 @@ Any model is created under the _'models'_ folder. Each model filename and object
 ![models](./docs/5.models.png)
 
 
-### Express Routes/Controllers (MV**C**)
+### Express Routes / Controllers ('C' in MVC)
 
 The express routes play an important role in a **MERN** application as these will be the way the frontend (React) will communicate with the database or external resources. In this sample application it will be the external communication with the NASA news feed.
 
@@ -298,7 +298,7 @@ The URL needed for hitting a particular API route is built by several peices, st
    '/api/articles/:id'
 ```
 
-### React components (M**V**C)
+### React components / Viewer ('V' in MVC)
 
 The last part is the implementation of the view using React.  For this section is expected that the reader is familiar with React to avoid going into too much details. Nevertheless, few critical ideas will be explained.  
 
