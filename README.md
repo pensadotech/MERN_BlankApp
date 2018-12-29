@@ -6,7 +6,7 @@ _by Armando Pensado_
 
 ## Description
 
-Putting together a MERN application is a complicated task, and it requires many manual steps and considerations. This article takes the reader through the steps required using an example. I hope new MERN developers will find beneficial.
+Putting together a MERN application is a complicated task, and it requires many manual steps and considerations. This article takes the reader through the steps required, using an example. I hope new MERN developers will find it beneficial.
 
 * MERN reference: https://www.mongodb.com/blog/post/the-modern-application-stack-part-1-introducing-the-mean-stack
 
