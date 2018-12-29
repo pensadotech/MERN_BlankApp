@@ -190,7 +190,7 @@ The express routes will be devoted to handle API operations like database access
 
 It is importnat to remember that the React components (client/src folders)  is a tool to program the frontend, and all the peices used will eventually be compiled and translated into a single page inside the _‘client/build’_ folder. React just provide the tools to facilitate the work for the developers, but is not what will be deployed.
 
-To ilustrate the next steps to build a **MERN** application, a specific example will be used. The exercise is to retreive NASA latest news and present them to the user, with the option to save the reference to the articles that are interesting, for leater read.
+To ilustrate the next steps building a **MERN** application, a specific example will be used. The exercise is to retreive NASA latest news and present them to the user, with the option to save the reference to the articles that are interesting, for leater read.
 
 ### Models (**M**VC)
 
@@ -201,7 +201,7 @@ Any model is created under the _'models'_ folder. Each model filename and object
 ![models](./docs/5.models.png)
 
 
-### Express Routes (MV**C**)
+### Express Routes/Controllers (MV**C**)
 
 The express routes play an important role in a **MERN** application as these will be the way the frontend (React) will communicate with the database or external resources. In this sample application it will be the external communication with the NASA news feed.
 
